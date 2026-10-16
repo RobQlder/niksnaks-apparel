@@ -1,0 +1,169 @@
+/* NiksNaks Apparel theme: Saturday-morning-cartoon retro on top of Bootstrap */
+:root {
+  --nn-ink: #1B1035;
+  --nn-cream: #FFF4DE;
+  --nn-pink: #FF3E9A;
+  --nn-yellow: #FFD23F;
+  --nn-orange: #FF8A3D;
+  --nn-purple: #7B3FE4;
+  --nn-teal: #00A6B4;
+  --nn-line: 3px solid var(--nn-ink);
+  --nn-display: 'Bungee', system-ui, sans-serif;
+
+  --bs-body-bg: var(--nn-cream);
+  --bs-body-color: var(--nn-ink);
+  --bs-body-font-family: 'Rubik', system-ui, sans-serif;
+  --bs-link-color-rgb: 255, 62, 154;
+}
+
+body { background: var(--nn-cream); }
+
+/* Nav */
+.nn-nav { background: var(--nn-ink); }
+.nn-brand { font-family: var(--nn-display); color: var(--nn-yellow) !important; font-size: 1.4rem; }
+.nn-nav .nav-link { color: var(--nn-cream); font-weight: 500; }
+.nn-nav .nav-link:hover, .nn-nav .nav-link:focus { color: var(--nn-yellow); }
+.nn-toggler { font-family: var(--nn-display); font-size: .8rem; color: var(--nn-ink); background: var(--nn-yellow); border: 2px solid var(--nn-yellow); border-radius: 999px; padding: .25rem .8rem; }
+
+/* Hero with halftone dots */
+.nn-hero {
+  padding: 3.5rem 0 2.5rem;
+  background-color: var(--nn-cream);
+  background-image: radial-gradient(rgba(255, 62, 154, .22) 2px, transparent 2.5px);
+  background-size: 18px 18px;
+}
+.nn-wordmark {
+  font-family: 'Bungee Shade', var(--nn-display);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 11vw, 6rem);
+  line-height: 1;
+  color: var(--nn-pink);
+  margin: 0;
+  text-transform: uppercase;
+}
+.nn-sub {
+  font-family: var(--nn-display);
+  font-size: clamp(1rem, 3.5vw, 1.6rem);
+  letter-spacing: .5em;
+  margin: .4rem 0 0 .5em;
+  color: var(--nn-teal);
+  text-transform: uppercase;
+}
+.nn-tagline {
+  display: inline-block;
+  margin: 1.25rem 0 0;
+  padding: .4rem 1rem;
+  background: var(--nn-yellow);
+  border: var(--nn-line);
+  border-radius: 999px;
+  font-weight: 500;
+  transform: rotate(-1.5deg);
+}
+
+/* Sunset stripes */
+.nn-stripes span { display: block; height: 9px; }
+.nn-stripes span:nth-child(1) { background: var(--nn-yellow); }
+.nn-stripes span:nth-child(2) { background: var(--nn-orange); }
+.nn-stripes span:nth-child(3) { background: var(--nn-pink); }
+.nn-stripes span:nth-child(4) { background: var(--nn-purple); }
+.nn-stripes span:nth-child(5) { background: var(--nn-teal); }
+
+.nn-section-title { font-family: var(--nn-display); font-weight: 400; font-size: 1.6rem; margin: 1rem 0 1rem; }
+
+/* Filter pills */
+.nn-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin-bottom: 2rem; }
+.nn-pill {
+  font-family: var(--nn-display);
+  font-size: .8rem;
+  padding: .4rem 1rem;
+  background: #fff;
+  color: var(--nn-ink);
+  border: var(--nn-line);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--nn-ink);
+  transition: transform .12s, box-shadow .12s;
+}
+.nn-pill:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--nn-ink); }
+.nn-pill:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--nn-ink); }
+.nn-pill[aria-pressed="true"] { background: var(--nn-pink); color: #fff; }
+.nn-pill:focus-visible { outline: 3px solid var(--nn-teal); outline-offset: 3px; }
+
+/* Shirt cards */
+.nn-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: var(--nn-line);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 var(--nn-ink);
+  color: var(--nn-ink);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.nn-card:hover, .nn-card:focus-visible { transform: translate(-2px, -3px) rotate(-1deg); box-shadow: 9px 10px 0 var(--nn-ink); color: var(--nn-ink); }
+.nn-card:focus-visible { outline: 3px solid var(--nn-teal); outline-offset: 4px; }
+.nn-card img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 9px 9px 0 0; background: #222; }
+.nn-plate { flex-grow: 1; padding: .6rem .8rem .7rem; border-top: var(--nn-line); border-radius: 0 0 9px 9px; }
+.nn-plate h3 { font-family: var(--nn-display); font-weight: 400; font-size: .95rem; margin: 0; line-height: 1.2; }
+.nn-plate p { font-size: .8rem; margin: .2rem 0 0; }
+.nn-plate--yellow { background: var(--nn-yellow); }
+.nn-plate--teal { background: var(--nn-teal); color: #fff; }
+.nn-plate--pink { background: var(--nn-pink); color: #fff; }
+.nn-plate--purple { background: var(--nn-purple); color: #fff; }
+.nn-plate--orange { background: var(--nn-orange); }
+
+/* Starburst: clip-path hides borders, so an ink layer sits behind a smaller yellow layer */
+.nn-sticker {
+  --burst: polygon(50% 0, 61% 15%, 79% 9%, 79% 27%, 97% 32%, 87% 50%, 97% 68%, 79% 73%, 79% 91%, 61% 85%, 50% 100%, 39% 85%, 21% 91%, 21% 73%, 3% 68%, 13% 50%, 3% 32%, 21% 27%, 21% 9%, 39% 15%);
+  position: absolute;
+  top: -18px;
+  right: -16px;
+  width: 64px;
+  height: 64px;
+  background: var(--nn-ink);
+  clip-path: var(--burst);
+  transform: rotate(12deg);
+  z-index: 2;
+}
+.nn-sticker span {
+  position: absolute;
+  inset: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--nn-display);
+  font-size: .72rem;
+  color: var(--nn-ink);
+  background: var(--nn-yellow);
+  clip-path: var(--burst);
+}
+
+.nn-empty { text-align: center; padding: 2rem; font-weight: 500; }
+
+/* About */
+.nn-about { padding: 2rem 0 3rem; }
+.nn-about-card { max-width: 640px; margin: 0 auto; background: #fff; border: var(--nn-line); border-radius: 12px; box-shadow: 6px 6px 0 var(--nn-teal); padding: 1.5rem 1.75rem; }
+.nn-about-card .nn-section-title { margin-top: 0; }
+
+/* Footer */
+.nn-footer { background: var(--nn-ink); color: var(--nn-cream); text-align: center; padding: 1.1rem 0; font-size: .9rem; }
+
+/* Lightbox caption tweaks */
+.glightbox-clean .gslide-title { font-family: var(--nn-display); font-weight: 400; }
+
+@media (max-width: 575.98px) {
+  .nn-hero { padding: 2.5rem 0 2rem; }
+  .nn-tagline { font-size: .85rem; padding: .35rem .8rem; }
+  .nn-filters { gap: .45rem; margin-bottom: 1.5rem; }
+  .nn-pill { font-size: .65rem; padding: .35rem .7rem; box-shadow: 2px 2px 0 var(--nn-ink); }
+  .nn-card { box-shadow: 4px 4px 0 var(--nn-ink); }
+  .nn-sticker { width: 52px; height: 52px; top: -14px; right: -10px; }
+  .nn-sticker span { inset: 4px; font-size: .6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nn-card, .nn-pill { transition: none; }
+  .nn-card:hover, .nn-card:focus-visible { transform: none; }
+}

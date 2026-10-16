@@ -1,0 +1,22 @@
+{
+  "collection": "Vintage Tees",
+  "categories": [
+    { "id": "uk", "label": "UK classics" },
+    { "id": "anime", "label": "Anime and robots" },
+    { "id": "pop", "label": "US and pop culture" }
+  ],
+  "shirts": [
+    { "name": "Pinky and the Brain", "caption": "White tee", "category": "pop", "image": "pinky.jpg", "new": true },
+    { "name": "T2 See You Soon", "caption": "Navy tee", "category": "pop", "image": "t2-see-you-soon.jpg", "new": true },
+    { "name": "Danger Mouse", "caption": "White tee", "category": "uk", "image": "danger-mouse.jpg" },
+    { "name": "Bananaman", "caption": "White tee", "category": "uk", "image": "bananaman.jpg" },
+    { "name": "SuperTed", "caption": "White tee", "category": "uk", "image": "superted.jpg" },
+    { "name": "Astro Boy", "caption": "White tee", "category": "anime", "image": "astroboy.jpg" },
+    { "name": "Gatchaman", "caption": "White tee", "category": "anime", "image": "gatchaman.jpg" },
+    { "name": "SilverHawks", "caption": "White tee", "category": "anime", "image": "silverhawks.jpg" },
+    { "name": "Ulysses 31", "caption": "Sky blue tee", "category": "anime", "image": "ulysses-31.jpg" },
+    { "name": "Voltron", "caption": "Slate tee", "category": "anime", "image": "voltron.jpg" },
+    { "name": "Rainbow Brite", "caption": "White tee", "category": "pop", "image": "rainbowbrite.jpg" },
+    { "name": "Strawberry Pops", "caption": "Pink tee", "category": "pop", "image": "strawberry-pops.jpg" }
+  ]
+}
