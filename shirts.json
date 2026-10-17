@@ -16,6 +16,13 @@
   ],
   "shirts": [
     {
+      "name": "Kimba the White Lion",
+      "caption": "White tee",
+      "category": "anime",
+      "image": "kimba.jpg",
+      "new": true
+    },
+    {
       "name": "Jem and the Holograms",
       "caption": "White tee",
       "category": "pop",
